@@ -24,9 +24,9 @@ def main():
                     running = False
                
           rect = rect.move(speed)
-          if(rect.top < 0 or rect.bottom > 480):
+          if(rect.top <= 0 or rect.bottom >= 480):
                speed[1] = -speed[1]
-          elif(rect.left < 0 or rect.right > 640):
+          elif(rect.left <= 0 or rect.right >= 640):
                speed[0] = -speed[0]
                
           screen.fill(black)
